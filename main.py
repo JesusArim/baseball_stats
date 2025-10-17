@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 def read_csv_file(path_file: str):
@@ -18,6 +19,19 @@ def create_list_data(frame, column_name):
 
 def display_info_df(frame):
    print(frame.info())
+
+##Function to create a scatter plot 
+def create_scatter_plot(df, x_col, y_col, title):
+   plt.figure(figsize = (10, 6))
+   plt.scatter(df[x_col], df[y_col], alpha=0.7, edgecolors='w')
+   plt.title(title)
+   plt.xlabel(x_col)
+   plt.ylabel(y_col)
+   plt.grid(True)
+   plt.tight_layout()
+   plt.show()
+   
+
 
 
    
