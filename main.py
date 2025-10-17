@@ -32,6 +32,18 @@ def create_scatter_plot(df, x_col, y_col, title):
    plt.show()
 
 
+def create_box_plot(df, attributes, xlabel: str, ylabel: str, title: str):
+   plt.figure(figsize = (10, 6))
+   data = df[attributes]
+   plt.boxplot(data, vert=False, patch_artist=True)
+   plt.yticks(range(1, 5), attributes)
+   plt.xlabel(xlabel)
+   plt.ylabel(ylabel)
+   plt.title(title)
+   plt.show()
+
+
+
 
 
    
@@ -53,3 +65,5 @@ if __name__=='__main__':
 
    create_scatter_plot(data, 'BB', 'SO', 'Walk (BB) vs Strikeout (SO) Ratio')
    create_scatter_plot(data, 'HR', 'AB', 'Home Runs (HR) vs At Bats (AB) Ratio')
+
+   
