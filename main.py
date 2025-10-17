@@ -30,7 +30,7 @@ def create_scatter_plot(df, x_col, y_col, title):
    plt.grid(True)
    plt.tight_layout()
    plt.show()
-   
+
 
 
 
@@ -50,3 +50,6 @@ if __name__=='__main__':
    display_info_df(data)
    missing_values = data.isnull().sum()
    print(f'Missing values on each column:\n {missing_values}')
+
+   create_scatter_plot(data, 'BB', 'SO', 'Walk (BB) vs Strikeout (SO) Ratio')
+   create_scatter_plot(data, 'HR', 'AB', 'Home Runs (HR) vs At Bats (AB) Ratio')
