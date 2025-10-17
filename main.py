@@ -72,4 +72,26 @@ if __name__=='__main__':
    box_plot_title = 'Distribution of Hits'
 
    create_box_plot(data, cols_name, x_label, y_label, box_plot_title)
+
+
+   """ Calculate averages and remove outliers"""
+   
+   #Remove players with 0 walks
+   data = data[data['BB'] != 0]
+
+   #Remove players with 0 Strikeouts from de Dataframe 
+   data = data[data['SO'] != 0]
+
+
+   #Create column with Strikesout/Walk Ratio %
+   data['SO/BB'] = data['SO'] / data['BB']
+
+   #Use DataFrame functionality to calculate the mean 
+   average_singles = data['Singles'].mean()
+   average_doubles = data['Doubles'].mean()
+   average_triples = data['Triples'].mean()
+   average_hr = data['HR'].mean() 
+
+   max_SO_BB = data['SO/BB'].max()
+   min_SO_BB = data['SO/BB'].min()
    
