@@ -94,4 +94,10 @@ if __name__=='__main__':
 
    max_SO_BB = data['SO/BB'].max()
    min_SO_BB = data['SO/BB'].min()
+
+   print(f'Singles: {average_singles}')
+   print(f'Doubles: {average_doubles}')
+   print(f'Triples: {average_triples}')
+   print(f'Home Runs: {average_hr}')
+   
    
