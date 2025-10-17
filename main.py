@@ -66,4 +66,10 @@ if __name__=='__main__':
    create_scatter_plot(data, 'BB', 'SO', 'Walk (BB) vs Strikeout (SO) Ratio')
    create_scatter_plot(data, 'HR', 'AB', 'Home Runs (HR) vs At Bats (AB) Ratio')
 
+   cols_name = ['Singles', 'Doubles', 'Triples', 'HR']
+   x_label = 'Hits'
+   y_label = 'Hit Type'
+   box_plot_title = 'Distribution of Hits'
+
+   create_box_plot(data, cols_name, x_label, y_label, box_plot_title)
    
